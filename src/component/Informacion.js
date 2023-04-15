@@ -1,9 +1,19 @@
+import { useState } from "react";
 import "../css/Component.css";
+import jQery from "../img/JQuery.jpg";
 function Informacion() {
+const [color,setColor]=useState('white')
   return (
     <div className="contenedor__informacion">
-      <article className="article" title="parrafo principal">
-        <h1 className="titulo">Create React App</h1>
+      <article className="article" title="parrafo principal"
+       style={{background:color}}>
+        <h1 className="titulo" data-testid="titulo">
+          Create React App
+        </h1>
+       
+        <div className="imagen">
+          <img src={jQery} alt="imagen" />
+        </div>
         <p className="parrafo" data-testId="contesto">
           Create React App es un ambiente cómodo para aprender React, y es la
           mejor manera de comenzar a construir una nueva aplicación de página
@@ -15,6 +25,11 @@ function Informacion() {
           ejecuta:
         </p>
       </article>
+      <div className="">
+        <button type="button"  className="button btn-primary"
+        onClick={()=>setColor(color==='white'? 'black':'white' )}
+        >Cambia-color</button>
+      </div>
     </div>
   );
 }

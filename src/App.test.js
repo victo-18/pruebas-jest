@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen ,fireEvent} from "@testing-library/react";
 //import App from './App';
 
 // test('renders learn react link', () => {
@@ -9,11 +9,11 @@ import { render, screen } from "@testing-library/react";
 import { Index } from "./page/Index";
 import Informacion from "./component/Informacion";
 let article;
-let titulo;
+let button;
 afterEach(() => {
   render(<Informacion />);
   article = screen.getByRole("article", { name: "parrafo principal" });
-  //titulo =screen.getByText()
+  button =screen.getByRole('button',{name:'Cambia-color'})
 });
 test("visibilizar texto", () => {
   render(<Index />);
@@ -22,13 +22,16 @@ test("visibilizar texto", () => {
 });
 test("validar clases", () => {
   expect(article).toHaveClass("article");
-  //expect(article).toHaveClass("titulo");
 });
-// test("validar estilos", () => {
-//   expect(article).toHaveStyle(
-//     'color:blue'
-//   )
-// });
-// test("validat estilos en el texto", () => {
-//   expect(article).toHaveClass("article");
-// });
+
+test("visualizar titulo", () => {
+  expect(article).toHaveTextContent("Create React App");
+});
+test("visualizar imagenes", () => {
+  expect(article).toBeVisible("jQery");
+});
+
+test("si al pulsar boton cabia color",()=>{
+  fireEvent.click(button);
+  expect(article).toHaveStyle('backgroundColor:black')
+})
