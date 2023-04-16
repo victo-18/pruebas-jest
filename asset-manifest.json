@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/victo-18/pruebas-jest.git/static/css/main.a464da3a.css",
+    "main.js": "/victo-18/pruebas-jest.git/static/js/main.be0eaaa5.js",
+    "static/js/787.d8a28fe1.chunk.js": "/victo-18/pruebas-jest.git/static/js/787.d8a28fe1.chunk.js",
+    "static/media/JQuery.jpg": "/victo-18/pruebas-jest.git/static/media/JQuery.32902834187903a571e8.jpg",
+    "index.html": "/victo-18/pruebas-jest.git/index.html",
+    "main.a464da3a.css.map": "/victo-18/pruebas-jest.git/static/css/main.a464da3a.css.map",
+    "main.be0eaaa5.js.map": "/victo-18/pruebas-jest.git/static/js/main.be0eaaa5.js.map",
+    "787.d8a28fe1.chunk.js.map": "/victo-18/pruebas-jest.git/static/js/787.d8a28fe1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a464da3a.css",
+    "static/js/main.be0eaaa5.js"
+  ]
+}
